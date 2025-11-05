@@ -9,55 +9,80 @@
 </head>
 <body>
 
-  <header>
-    <h1>🌞 Sistema Solar Inteligente - Monitoreo</h1>
-    <p>Proyecto a escala | Energía solar, almacenamiento y consumo</p>
-  </header>
-
-  <section id="estado">
-    <h2>Estado General del Sistema</h2>
-    <div class="tarjetas">
-      <div class="card">
-        <h3>Voltaje</h3>
-        <p id="voltaje">-- V</p>
-      </div>
-
-      <div class="card">
-        <h3>Corriente</h3>
-        <p id="corriente">-- A</p>
-      </div>
-
-      <div class="card">
-        <h3>Potencia</h3>
-        <p id="potencia">-- W</p>
-      </div>
-      
-      <div class="card">
-        <h3>Modo</h3>
-        <p class="estado" id="modo">--</p>
-      </div>
+  <!-- Sistema de Login -->
+  <div id="login-container" class="login-container">
+    <div class="login-form">
+      <h2>🌞 Iniciar Sesión</h2>
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="email">Correo Electrónico</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" required>
+        </div>
+        <button type="submit" class="login-btn">Ingresar</button>
+      </form>
+      <p id="login-error" class="error-message"></p>
     </div>
-  </section>
+  </div>
 
-  <section id="grafico">
-    <h2>Potencia (W)</h2>
-    <canvas id="graficaPotencia"></canvas> 
-  </section>
+  <!-- Contenido Principal (oculto inicialmente) -->
+  <div id="main-content" class="hidden">
+    <header>
+      <div class="header-content">
+        <h1>🌞 Sistema Solar Inteligente - Monitoreo</h1>
+        <p>Proyecto a escala | Energía solar, almacenamiento y consumo</p>
+        <button id="logout-btn" class="logout-btn">Cerrar Sesión</button>
+      </div>
+    </header>
 
-  <section id="cargas">
-    <h2>Sesiones de Carga de Dispositivos</h2>
-    <ul id="lista_sesiones"></ul>
-    <p><b>Total Energía Consumida:</b> <span id="total_energia">0</span> Wh</p>
-  </section>
+    <section id="estado">
+      <h2>Estado General del Sistema</h2>
+      <div class="tarjetas">
+        <div class="card">
+          <h3>Voltaje</h3>
+          <p id="voltaje">-- V</p>
+        </div>
 
-  <section id="alertas">
-    <h2>Eventos y Alertas</h2>
-    <ul id="lista_eventos"></ul>
-  </section>
+        <div class="card">
+          <h3>Corriente</h3>
+          <p id="corriente">-- A</p>
+        </div>
 
-  <footer>
-    <p>© 2025 Proyecto Solar Inteligente | ITSSNP</p>
-  </footer>
+        <div class="card">
+          <h3>Potencia</h3>
+          <p id="potencia">-- W</p>
+        </div>
+        
+        <div class="card">
+          <h3>Modo</h3>
+          <p class="estado" id="modo">--</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="grafico">
+      <h2>Potencia (W)</h2>
+      <canvas id="graficaPotencia"></canvas> 
+    </section>
+
+    <section id="cargas">
+      <h2>Sesiones de Carga de Dispositivos</h2>
+      <ul id="lista_sesiones"></ul>
+      <p><b>Total Energía Consumida:</b> <span id="total_energia">0</span> Wh</p>
+    </section>
+
+    <section id="alertas">
+      <h2>Eventos y Alertas</h2>
+      <ul id="lista_eventos"></ul>
+    </section>
+
+    <footer>
+      <p>© 2025 Proyecto Solar Inteligente | ITSSNP</p>
+    </footer>
+  </div>
 
   <script type="module" src="app.js"></script>
 </body>
