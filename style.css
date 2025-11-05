@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+/* -----------------------
+   CONFIGURACIÓN BASE (MODIFICADA)
+------------------------ */
+body {
+  background: #f4f8fb;
+  color: #222;
+  padding: 10px; /* Ajustado para móviles */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* -----------------------
+   ENCABEZADO
+------------------------ */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+header h1 {
+  color: #0078d4;
+  font-size: 1.8rem; /* Ajustado para responsive */
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* -----------------------
+   SECCIONES GENERALES
+------------------------ */
+section {
+  background: #fff;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  width: 95%; /* Ajustado para responsive */
+  max-width: 1000px;
+}
+
+h2 {
+  color: #0078d4;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1.4rem; /* Ajustado para responsive */
+}
+
+/* -----------------------
+   TARJETAS DE ESTADO
+------------------------ */
+.tarjetas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  flex: 1 1 200px; /* Ajustado para responsive */
+  max-width: 220px;
+  background: #e9f5ff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h3 {
+  color: #0078d4;
+  font-size: 1.1rem;
+}
+
+.card p {
+  font-size: 1.2rem; /* Ajustado */
+  margin-top: 10px;
+  word-wrap: break-word;
+}
+
+/* -----------------------
+   CLASES DE ESTADO (MODIFICADAS)
+------------------------ */
+.estado {
+  font-weight: bold;
+}
+/* Se eliminó .operativo y .falla */
+.estado.cargando {
+  color: #28a745; /* Verde */
+}
+.estado.descargando {
+  color: #007bff; /* Azul */
+}
+.estado.reposo {
+  color: #6c757d; /* Gris */
+}
+
+/* -----------------------
+   LISTAS Y ALERTAS
+------------------------ */
+#lista_sesiones, #lista_eventos {
+  list-style: none;
+  padding: 10px;
+  text-align: left; /* Re-agregado */
+}
+
+#lista_eventos li {
+  margin: 5px 0;
+  padding: 5px;
+  border-left: 5px solid orange;
+}
+
+#lista_eventos li.critico {
+  border-color: red;
+  font-weight: bold; /* Agregado */
+}
+
+/* -----------------------
+   GRÁFICA
+------------------------ */
+#grafico {
+  text-align: center;
+}
+canvas {
+  max-width: 100%;
+  height: auto !important;
+}
+
+/* -----------------------
+   PIE DE PÁGINA
+------------------------ */
+footer {
+  text-align: center;
+  margin-top: 30px; /* Ajustado */
+  color: #777;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+/* -----------------------
+   MEDIA QUERIES (MÓVILES) (RE-AGREGADAS)
+------------------------ */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  .tarjetas {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 90%;
+    max-width: 300px;
+  }
+  section {
+    padding: 15px;
+  }
+  #lista_sesiones li,
+  #lista_eventos li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+  .card p {
+    font-size: 1rem;
+  }
+  body {
+    padding: 5px;
+  }
+}

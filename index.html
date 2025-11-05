@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Solar Inteligente</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>🌞 Sistema Solar Inteligente - Monitoreo</h1>
+    <p>Proyecto a escala | Energía solar, almacenamiento y consumo</p>
+  </header>
+
+  <section id="estado">
+    <h2>Estado General del Sistema</h2>
+    <div class="tarjetas">
+      <div class="card">
+        <h3>Voltaje</h3>
+        <p id="voltaje">-- V</p>
+      </div>
+
+      <div class="card">
+        <h3>Corriente</h3>
+        <p id="corriente">-- A</p>
+      </div>
+
+      <div class="card">
+        <h3>Potencia</h3>
+        <p id="potencia">-- W</p>
+      </div>
+      
+      <div class="card">
+        <h3>Modo</h3>
+        <p class="estado" id="modo">--</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="grafico">
+    <h2>Potencia (W)</h2>
+    <canvas id="graficaPotencia"></canvas> 
+  </section>
+
+  <section id="cargas">
+    <h2>Sesiones de Carga de Dispositivos</h2>
+    <ul id="lista_sesiones"></ul>
+    <p><b>Total Energía Consumida:</b> <span id="total_energia">0</span> Wh</p>
+  </section>
+
+  <section id="alertas">
+    <h2>Eventos y Alertas</h2>
+    <ul id="lista_eventos"></ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Proyecto Solar Inteligente | ITSSNP</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
